@@ -1,0 +1,16 @@
+--Query:procedure to insert a new employee record to the relation
+
+--PL/SQL Block:
+create or replace
+procedure insertion_emp(id empsal.EID%type,name empsal.Ename%type,sal empsal.salary%type,dname empsal.Dname%type)
+is
+begin
+ insert into empsal values(id,name,sal,dname);
+end;
+/
+--output:
+Procedure created.
+
+SQL> exec insertion_emp(123,'prathima',123456,'IT')
+
+PL/SQL procedure successfully completed.
